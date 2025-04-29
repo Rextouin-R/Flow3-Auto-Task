@@ -345,7 +345,7 @@ async function runBot() {
       console.log(`${colors.red}${emojis.error} Total failed to claim: ${totalFailed}${colors.reset}`);
       console.log(`${colors.white}${'-'.repeat(50)}${colors.reset}`);
 
-      const waitSeconds = 30;
+      const waitSeconds = 600;
       console.log(`${colors.yellow}${emojis.time} Waiting ${waitSeconds} seconds before next cycle...${colors.reset}`);
 
       for (let i = waitSeconds; i > 0; i--) {
