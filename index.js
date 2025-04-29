@@ -362,10 +362,10 @@ async function runBot() {
       console.log(`${colors.white}${'-'.repeat(50)}${colors.reset}`);
 
       const waitSeconds = 1000;
-      console.log(`${colors.white}${emojis.time}  Menunggu ${waitSeconds} detik sebeblum cycle selanjutnya...${colors.reset}`);
+      console.log(`${colors.yellow}${emojis.time}  Menunggu ${waitSeconds} detik sebeblum cycle selanjutnya...${colors.reset}`);
 
       for (let i = waitSeconds; i > 0; i--) {
-        process.stdout.write(`\r${colors.white}${emojis.time}  Cycle selanjutnya: ${colors.bright}${i}${colors.reset} seconds`);
+        process.stdout.write(`\r${colors.yellow}${emojis.time}  Cycle selanjutnya: ${colors.bright}${i}${colors.reset} seconds`);
         await new Promise(resolve => setTimeout(resolve, 1000));
       }
       process.stdout.write('\r' + ' '.repeat(60) + '\r'); 
