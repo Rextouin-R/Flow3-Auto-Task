@@ -231,17 +231,21 @@ function printPointStats(stats, tokenIndex) {
   
   console.log(`\n${colors.cyan}${emojis.money} INFORMASI SALDO (TOKEN #${tokenIndex + 1}) ${emojis.money}${colors.reset}`);
   console.log(`${colors.cyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.reset}`);
-  console.log(`${colors.white}${emojis.star} Total Point:         ${colors.green}${stats.totalPointEarned.toFixed(2)}${colors.reset}`);
-  console.log(`${colors.white}${emojis.check} Task Point:          ${colors.green}${stats.totalPointTask.toFixed(2)}${colors.reset}`);
-  console.log(`${colors.white}${emojis.rocket} Internet Point:      ${colors.green}${stats.totalPointInternet.toFixed(2)}${colors.reset}`);
-  console.log(`${colors.white}${emojis.info} Referral Point:      ${colors.green}${stats.totalPointReferral.toFixed(2)}${colors.reset}`);
-  console.log(`${colors.white}${emojis.time} Pendapatan Point Hari Ini:     ${colors.green}${stats.todayPointEarned.toFixed(2)}${colors.reset}`);
-  console.log(`${colors.white}${emojis.money} Rate Pendapatan:         ${colors.green}${stats.earningRate.toFixed(2)}/day${colors.reset}`);
+  console.log(`${colors.white}${emojis.star} Total Point                 : ${colors.green}${stats.totalPointEarned.toFixed(2)}${colors.reset}`);
+  console.log(`${colors.white}${emojis.check}  Task Point                : ${colors.green}${stats.totalPointTask.toFixed(2)}${colors.reset}`);
+  console.log(`${colors.white}${emojis.rocket} Internet Point            : ${colors.green}${stats.totalPointInternet.toFixed(2)}${colors.reset}`);
+  console.log(`${colors.white}${emojis.info}  Referral Point             : ${colors.green}${stats.totalPointReferral.toFixed(2)}${colors.reset}`);
+  console.log(`${colors.white}${emojis.time}  Pendapatan Point Hari Ini  : ${colors.green}${stats.todayPointEarned.toFixed(2)}${colors.reset}`);
+  console.log(`${colors.white}${emojis.money} Rate Pendapatan            : ${colors.green}${stats.earningRate.toFixed(2)}/day${colors.reset}`);
   console.log(`${colors.cyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.reset}\n`);
 }
 
 async function processTokenTasks(token, tokenIndex, useProxy = true) {
   try {
+    console.log(`\n${colors.white}
+    █▀ █░ █▀█ █░█░█   ▀▀█
+    █▀ █▄ █▄█ ▀▄▀▄▀   ▄██  FLOW3 AUTO TASK
+    ${colors.reset}`);
     console.log(`\n${colors.white}${emojis.key}  Memproses Token #${tokenIndex + 1}${colors.reset}`);
 
     let proxy = null;
@@ -269,7 +273,7 @@ async function processTokenTasks(token, tokenIndex, useProxy = true) {
         task.status === 'pending' ? emojis.pending :
         task.status === 'claimed' ? emojis.success : emojis.info;
         
-      console.log(`${colors.white}${emojis.info} Memproses: ${colors.bright}${task.name}${colors.reset} ${colors.white}(${statusColor}${task.status} ${statusEmoji}${colors.white}) - ${colors.green}${task.pointAmount} point${colors.reset}`);
+      console.log(`${colors.white}${emojis.info}  Memproses: ${colors.bright}${task.name}${colors.reset} ${colors.white}(${statusColor}${task.status} ${statusEmoji}${colors.white}) - ${colors.green}${task.pointAmount} point${colors.reset}`);
 
       const claimResult = await claimTask(axiosInstance, task._id);
       
@@ -358,7 +362,7 @@ async function runBot() {
       console.log(`${colors.yellow}${emojis.time} Menunggu ${waitSeconds} detik untuk memulai cycle selanjutnya...${colors.reset}`);
 
       for (let i = waitSeconds; i > 0; i--) {
-        process.stdout.write(`\r${colors.yellow}${emojis.time} Cycle selanjutnya: ${colors.bright}${i}${colors.reset} seconds`);
+        process.stdout.write(`\r${colors.yellow}${emojis.time}  Cycle selanjutnya: ${colors.bright}${i}${colors.reset} detik..`);
         await new Promise(resolve => setTimeout(resolve, 1000));
       }
       process.stdout.write('\r' + ' '.repeat(60) + '\r'); 
@@ -366,7 +370,7 @@ async function runBot() {
       cycleCount++;
     } catch (error) {
       console.error(`${colors.red}${emojis.error} Error in main bot loop:${colors.reset}`, error.message);
-      console.log(`${colors.yellow}${emojis.pending} Menunggu 600 detik untuk point selanjutnya...${colors.reset}`);
+      console.log(`${colors.yellow}${emojis.pending}  Menunggu 600 detik untuk point selanjutnya...${colors.reset}`);
       await new Promise(resolve => setTimeout(resolve, 600 * 1000));
     }
   }
