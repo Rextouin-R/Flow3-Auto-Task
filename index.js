@@ -231,9 +231,9 @@ function printPointStats(stats, tokenIndex) {
   
   console.log(`\n${colors.cyan}${emojis.money} INFORMASI SALDO (TOKEN #${tokenIndex + 1}) ${emojis.money}${colors.reset}`);
   console.log(`${colors.cyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.reset}`);
-  console.log(`${colors.white}${emojis.star} Total Point                 : ${colors.green}${stats.totalPointEarned.toFixed(2)}${colors.reset}`);
-  console.log(`${colors.white}${emojis.check}  Task Point                : ${colors.green}${stats.totalPointTask.toFixed(2)}${colors.reset}`);
-  console.log(`${colors.white}${emojis.rocket} Internet Point            : ${colors.green}${stats.totalPointInternet.toFixed(2)}${colors.reset}`);
+  console.log(`${colors.white}${emojis.star} Total Point                : ${colors.green}${stats.totalPointEarned.toFixed(2)}${colors.reset}`);
+  console.log(`${colors.white}${emojis.check}  Task Point                 : ${colors.green}${stats.totalPointTask.toFixed(2)}${colors.reset}`);
+  console.log(`${colors.white}${emojis.rocket} Internet Point             : ${colors.green}${stats.totalPointInternet.toFixed(2)}${colors.reset}`);
   console.log(`${colors.white}${emojis.info}  Referral Point             : ${colors.green}${stats.totalPointReferral.toFixed(2)}${colors.reset}`);
   console.log(`${colors.white}${emojis.time}  Pendapatan Point Hari Ini  : ${colors.green}${stats.todayPointEarned.toFixed(2)}${colors.reset}`);
   console.log(`${colors.white}${emojis.money} Rate Pendapatan            : ${colors.green}${stats.earningRate.toFixed(2)}/day${colors.reset}`);
@@ -245,8 +245,10 @@ async function processTokenTasks(token, tokenIndex, useProxy = true) {
     console.log(`\n${colors.white}
     █▀ █░ █▀█ █░█░█   ▀▀█
     █▀ █▄ █▄█ ▀▄▀▄▀   ▄██  FLOW3 AUTO TASK
+    ==> 🟦 join channel : https://t.me/UNLXairdop
+    ==> ⬛ github : https://github.com/Rextouin-R/
     ${colors.reset}`);
-    console.log(`\n${colors.white}${emojis.key}  Memproses Token #${tokenIndex + 1}${colors.reset}`);
+    console.log(`\n${colors.white}${emojis.key} Memproses Token #${tokenIndex + 1}${colors.reset}`);
 
     let proxy = null;
     if (useProxy && proxies.length > 0) {
@@ -256,7 +258,7 @@ async function processTokenTasks(token, tokenIndex, useProxy = true) {
     const axiosInstance = createAxiosInstance(token, proxy);
 
     const tasks = await getTasks(axiosInstance);
-    console.log(`${colors.white}${emojis.info} Berhasil ${colors.yellow}${tasks.length}${colors.white} task untuk token #${tokenIndex + 1}${colors.reset}`);
+    console.log(`${colors.white}${emojis.info}  Berhasil ${colors.yellow}${tasks.length}${colors.white} task untuk token #${tokenIndex + 1}${colors.reset}`);
     
     let claimedCount = 0;
     let failedCount = 0;
@@ -288,7 +290,7 @@ async function processTokenTasks(token, tokenIndex, useProxy = true) {
       await new Promise(resolve => setTimeout(resolve, 2000));
     }
     
-    console.log(`\n${colors.white}${emojis.info} Memproses task summary untuk token #${tokenIndex + 1}:${colors.reset}`);
+    console.log(`\n${colors.white}${emojis.info}  Memproses task summary untuk token #${tokenIndex + 1}:${colors.reset}`);
     console.log(`${colors.green}${emojis.success} Berhasil di claim: ${claimedCount}${colors.reset}`);
     console.log(`${colors.yellow}${emojis.pending} Siap di claim: ${alreadyClaimedCount}${colors.reset}`);
     console.log(`${colors.red}${emojis.error} Gagal di claim: ${failedCount}${colors.reset}`);
@@ -358,8 +360,8 @@ async function runBot() {
       console.log(`${colors.red}${emojis.error} Total gagal di claim: ${totalFailed}${colors.reset}`);
       console.log(`${colors.white}${'-'.repeat(50)}${colors.reset}`);
 
-      const waitSeconds = 600;
-      console.log(`${colors.yellow}${emojis.time} Menunggu ${waitSeconds} detik untuk memulai cycle selanjutnya...${colors.reset}`);
+      const waitSeconds = 1252;
+      console.log(`${colors.yellow}${emojis.time}  Menunggu ${waitSeconds} detik untuk memulai cycle selanjutnya...${colors.reset}`);
 
       for (let i = waitSeconds; i > 0; i--) {
         process.stdout.write(`\r${colors.yellow}${emojis.time}  Cycle selanjutnya: ${colors.bright}${i}${colors.reset} detik..`);
@@ -370,8 +372,8 @@ async function runBot() {
       cycleCount++;
     } catch (error) {
       console.error(`${colors.red}${emojis.error} Error in main bot loop:${colors.reset}`, error.message);
-      console.log(`${colors.yellow}${emojis.pending}  Menunggu 600 detik untuk point selanjutnya...${colors.reset}`);
-      await new Promise(resolve => setTimeout(resolve, 600 * 1000));
+      console.log(`${colors.yellow}${emojis.pending}  Menunggu 1252 detik untuk mendapatkan 15000 point selanjutnya...${colors.reset}`);
+      await new Promise(resolve => setTimeout(resolve, 1252 * 1000));
     }
   }
 }
