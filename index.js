@@ -230,9 +230,9 @@ function printPointStats(stats, tokenIndex) {
   
   console.log(`\n${colors.cyan}${emojis.money} INFORMASI BALANCE (TOKEN #${tokenIndex + 1}) ${emojis.money}${colors.reset}`);
   console.log(`${colors.cyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.reset}`);
-  console.log(`${colors.white}${emojis.star} Total Point         :${colors.green}${stats.totalPointEarned.toFixed(2)}${colors.reset}`);
-  console.log(`${colors.white}${emojis.check}  Task Point          :${colors.green}${stats.totalPointTask.toFixed(2)}${colors.reset}`);
-  console.log(`${colors.white}${emojis.rocket} Internet Point      :${colors.green}${stats.totalPointInternet.toFixed(2)}${colors.reset}`);
+  console.log(`${colors.white}${emojis.star} Total Point          :${colors.green}${stats.totalPointEarned.toFixed(2)}${colors.reset}`);
+  console.log(`${colors.white}${emojis.check}  Task Point           :${colors.green}${stats.totalPointTask.toFixed(2)}${colors.reset}`);
+  console.log(`${colors.white}${emojis.rocket} Internet Point       :${colors.green}${stats.totalPointInternet.toFixed(2)}${colors.reset}`);
   console.log(`${colors.white}${emojis.info}  Referral Point       :${colors.green}${stats.totalPointReferral.toFixed(2)}${colors.reset}`);
   console.log(`${colors.white}${emojis.time}  Earnings Hari Ini    :${colors.green}${stats.todayPointEarned.toFixed(2)}${colors.reset}`);
   console.log(`${colors.white}${emojis.money} Earning Rate         :${colors.green}${stats.earningRate.toFixed(2)}/day${colors.reset}`);
@@ -320,10 +320,11 @@ function reloadTokensAndProxies() {
 
 async function runBot() {
   printBanner();
-  console.log(`${colors.white}${emojis.rocket}
-  █▀ █░ █▀█ █░█░█ ▀▀█
-  █▀ █▄ █▄█ ▀▄▀▄▀ ▄██  Auto task dan multi akun
-  ${colors.reset}`);
+  console.log(`${colors.white}${emojis.rocket}==================================≠===============   ${colors.reset}`);
+  console.log(`${colors.white}${emojis.rocket}==> 🟦 join channel : https://t.me/UNLXairdop   ${colors.reset}`);
+  console.log(`${colors.white}${emojis.rocket}==================================≠===============   ${colors.reset}`);
+  console.log(`${colors.white}${emojis.rocket}==> ⬛ github : https://github.com/Rextouin-R/   ${colors.reset}`);
+  console.log(`${colors.white}${emojis.rocket}==================================≠===============   ${colors.reset}`);
 
   tokens = loadTokens();
   proxies = loadProxies();
