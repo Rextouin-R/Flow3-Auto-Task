@@ -49,12 +49,12 @@ function loadTokens() {
       throw new Error('Token file is empty');
     }
     
-    console.log(`${colors.green}${emojis.key} Loaded ${colors.bright}${tokenList.length}${colors.reset}${colors.green} tokens successfully from token.txt${colors.reset}`);
+    console.log(`${colors.green}${emojis.key} Memuat ${colors.bright}${tokenList.length}${colors.reset}${colors.green} token berhasil dari token.txt${colors.reset}`);
     
     return tokenList;
   } catch (error) {
-    console.error(`${colors.red}${emojis.error} Error reading tokens from file:${colors.reset}`, error.message);
-    console.error(`${colors.yellow}${emojis.warning} Please create a 'token.txt' file with one token per line${colors.reset}`);
+    console.error(`${colors.red}${emojis.error} Gagal memeriksa token dari file:${colors.reset}`, error.message);
+    console.error(`${colors.yellow}${emojis.warning} Mohon buat token di 'token.txt' satu token perbaris${colors.reset}`);
     process.exit(1);
   }
 }
@@ -64,7 +64,7 @@ function loadProxies() {
     const proxyPath = path.join(__dirname, 'proxies.txt');
 
     if (!fs.existsSync(proxyPath)) {
-      console.log(`${colors.yellow}${emojis.warning} proxies.txt not found. Running without proxies.${colors.reset}`);
+      console.log(`${colors.yellow}${emojis.warning} proxies.txt tidak ada. yang berjalan di proxies.${colors.reset}`);
       return [];
     }
     
@@ -75,15 +75,15 @@ function loadProxies() {
       .filter(proxy => proxy.length > 0);
     
     if (proxyList.length > 0) {
-      console.log(`${colors.green}${emojis.network} Loaded ${colors.bright}${proxyList.length}${colors.reset}${colors.green} proxies from proxies.txt${colors.reset}`);
+      console.log(`${colors.green}${emojis.network} Memuat ${colors.bright}${proxyList.length}${colors.reset}${colors.green} proxy dari proxies.txt${colors.reset}`);
     } else {
-      console.log(`${colors.yellow}${emojis.warning} No proxies found in proxies.txt. Running without proxies.${colors.reset}`);
+      console.log(`${colors.yellow}${emojis.warning} Proxy tidak ada di proxies.txt. untuk berjalan di proxies.${colors.reset}`);
     }
     
     return proxyList;
   } catch (error) {
-    console.error(`${colors.yellow}${emojis.warning} Error reading proxies:${colors.reset}`, error.message);
-    console.log(`${colors.yellow}${emojis.warning} Running without proxies.${colors.reset}`);
+    console.error(`${colors.yellow}${emojis.warning} Gagal memeriksa proxy:${colors.reset}`, error.message);
+    console.log(`${colors.yellow}${emojis.warning} berjalan untuk proxy.${colors.reset}`);
     return [];
   }
 }
@@ -117,7 +117,7 @@ function createProxyAgent(proxyString) {
   try {
     return new HttpsProxyAgent(formattedProxy);
   } catch (error) {
-    console.error(`${colors.red}${emojis.error} Error creating proxy agent for ${proxyString}:${colors.reset}`, error.message);
+    console.error(`${colors.red}${emojis.error} Gagal membuat proxy untuk ${proxyString}:${colors.reset}`, error.message);
     return null;
   }
 }
@@ -148,7 +148,7 @@ function createAxiosInstance(token, proxyString = null) {
     const proxyAgent = createProxyAgent(proxyString);
     if (proxyAgent) {
       axiosConfig.httpsAgent = proxyAgent;
-      console.log(`${colors.cyan}${emojis.network} Using proxy: ${colors.bright}${proxyString}${colors.reset}`);
+      console.log(`${colors.cyan}${emojis.network} Menggunakan proxy: ${colors.bright}${proxyString}${colors.reset}`);
     }
   }
   
@@ -157,9 +157,21 @@ function createAxiosInstance(token, proxyString = null) {
 
 function printBanner() {
   const bannerLines = [
-    `${colors.cyan}----------------------------------------${colors.reset}`,
-    `${colors.cyan}${colors.reset}  ${colors.bright}${colors.white}FLOW3 AUTO TASK - AIRDROP INSIDERS${colors.reset}  ${colors.cyan}${colors.reset}`,
-    `${colors.cyan}----------------------------------------${colors.reset}`
+    `${colors.cyan}
+    ▄▀█ █ █▀█ █▀▄ █▀█ █▀█ █▀█ ∞
+    █▀█ █ █▀▄ █▄▀ █▀▄ █▄█ █▀▀
+    ${colors.reset}`,
+    `${colors.cyan}${colors.reset}  ${colors.bright}${colors.white}
+    ┏━┓ ┏━┓         ┏━┓ ╔═╗             ╔═╗ ┏━┓__            ┏━┓
+    ┃ ┃ ┃ ┃ ┏━╻━━━┓ ┃ ┃ ┏━┓ ┏━╻━━╻━━━━┓ ┏━┓ ┃ ┏━┛  ┏━━━━╮ ╭━━╹ ┃
+    ┃ ┗━┛ ┃ ┃ ┏━┓ ┃ ┃ ┃ ┃ ┃ ┃ ┏━┓ ┏━┓ ┃ ┃ ┃ ┃ ┗━━┓ ┃ ┏━━┛ ┃ ━━ ┃
+    ┗━━━ ━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━━━━┛ ┗━━━━┛ ╰━━━━┛
+    ${colors.reset}  ${colors.cyan}${colors.reset}`,
+    `${colors.cyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.reset}`
+    `${colors.cyan}${colors.reset}  ${colors.bright}${colors.white}==> 🟦 join channel : https://t.me/UNLXairdop${colors.reset}  ${colors.cyan}${colors.reset}`,
+    `${colors.cyan}${colors.reset}  ${colors.bright}${colors.white}==================================≠===============${colors.reset}  ${colors.cyan}${colors.reset}`,
+    `${colors.cyan}${colors.reset}  ${colors.bright}${colors.white}==> ⬛ github : https://github.com/Rextouin-R/${colors.reset}  ${colors.cyan}${colors.reset}`,
+    `${colors.cyan}${colors.reset}  ${colors.bright}${colors.white}==================================≠===============${colors.reset}  ${colors.cyan}${colors.reset}`,
   ];
   
   console.log('\n' + bannerLines.join('\n') + '\n');
@@ -170,7 +182,7 @@ async function getPointStats(axiosInstance) {
     const response = await axiosInstance.get('https://api2.flow3.tech/api/user/get-point-stats');
     return response.data.data;
   } catch (error) {
-    console.error(`${colors.red}${emojis.error} Error fetching point stats:${colors.reset}`, error.message);
+    console.error(`${colors.red}${emojis.error} Gagal memeriksa status poin:${colors.reset}`, error.message);
     if (error.response) {
       console.error(`${colors.red}Error details:${colors.reset}`, error.response.data);
     }
@@ -183,7 +195,7 @@ async function getTasks(axiosInstance) {
     const response = await axiosInstance.get('https://api2.flow3.tech/api/task/get-user-task');
     return response.data.data;
   } catch (error) {
-    console.error(`${colors.red}${emojis.error} Error fetching tasks:${colors.reset}`, error.message);
+    console.error(`${colors.red}${emojis.error} Task gagal:${colors.reset}`, error.message);
     if (error.response) {
       console.error(`${colors.red}Error details:${colors.reset}`, error.response.data);
     }
@@ -198,15 +210,15 @@ async function claimTask(axiosInstance, taskId) {
       { taskId }
     );
     
-    if (response.data.result === 'success') {
-      console.log(`${colors.green}${emojis.success} Task ${taskId} claimed successfully!${colors.reset}`);
+    if (response.data.result === 'berhasil') {
+      console.log(`${colors.green}${emojis.success} Task ${taskId} berhasil di claim${colors.reset}`);
       return true;
     } else {
-      console.log(`${colors.yellow}${emojis.warning} Task ${taskId} claim response: ${JSON.stringify(response.data)}${colors.reset}`);
+      console.log(`${colors.yellow}${emojis.warning} Respon ${taskId} clai task: ${JSON.stringify(response.data)}${colors.reset}`);
       return false;
     }
   } catch (error) {
-    console.error(`${colors.red}${emojis.error} Error claiming task ${taskId}:${colors.reset}`, error.message);
+    console.error(`${colors.red}${emojis.error} Gagal mengclaim task ${taskId}:${colors.reset}`, error.message);
     if (error.response) {
       console.error(`${colors.red}Error details:${colors.reset}`, error.response.data);
     }
@@ -216,24 +228,24 @@ async function claimTask(axiosInstance, taskId) {
 
 function printPointStats(stats, tokenIndex) {
   if (!stats) {
-    console.log(`${colors.yellow}${emojis.warning} No point stats available for token #${tokenIndex + 1}${colors.reset}`);
+    console.log(`${colors.yellow}${emojis.warning} Tidak ada status point untuk token #${tokenIndex + 1}${colors.reset}`);
     return;
   }
   
-  console.log(`\n${colors.cyan}${emojis.money} BALANCE INFORMATION (TOKEN #${tokenIndex + 1}) ${emojis.money}${colors.reset}`);
+  console.log(`\n${colors.cyan}${emojis.money} HASIL INFORMASI POINT (TOKEN #${tokenIndex + 1}) ${emojis.money}${colors.reset}`);
   console.log(`${colors.cyan}------------------------------------------${colors.reset}`);
-  console.log(`${colors.white}${emojis.star} Total Points:         ${colors.green}${stats.totalPointEarned.toFixed(2)}${colors.reset}`);
-  console.log(`${colors.white}${emojis.check} Task Points:          ${colors.green}${stats.totalPointTask.toFixed(2)}${colors.reset}`);
-  console.log(`${colors.white}${emojis.rocket} Internet Points:      ${colors.green}${stats.totalPointInternet.toFixed(2)}${colors.reset}`);
-  console.log(`${colors.white}${emojis.info} Referral Points:      ${colors.green}${stats.totalPointReferral.toFixed(2)}${colors.reset}`);
-  console.log(`${colors.white}${emojis.time} Today's Earnings:     ${colors.green}${stats.todayPointEarned.toFixed(2)}${colors.reset}`);
-  console.log(`${colors.white}${emojis.money} Earning Rate:         ${colors.green}${stats.earningRate.toFixed(2)}/day${colors.reset}`);
+  console.log(`${colors.white}${emojis.star} Total Point          :${colors.green}${stats.totalPointEarned.toFixed(2)}${colors.reset}`);
+  console.log(`${colors.white}${emojis.check} Task Point          :${colors.green}${stats.totalPointTask.toFixed(2)}${colors.reset}`);
+  console.log(`${colors.white}${emojis.rocket} Internet Point     :${colors.green}${stats.totalPointInternet.toFixed(2)}${colors.reset}`);
+  console.log(`${colors.white}${emojis.info} Referral Point       :${colors.green}${stats.totalPointReferral.toFixed(2)}${colors.reset}`);
+  console.log(`${colors.white}${emojis.time} Point Hari Ini       :${colors.green}${stats.todayPointEarned.toFixed(2)}${colors.reset}`);
+  console.log(`${colors.white}${emojis.money} Rate Pendapatan     :${colors.green}${stats.earningRate.toFixed(2)}/day${colors.reset}`);
   console.log(`${colors.cyan}------------------------------------------${colors.reset}\n`);
 }
 
 async function processTokenTasks(token, tokenIndex, useProxy = true) {
   try {
-    console.log(`\n${colors.white}${emojis.key} Processing Token #${tokenIndex + 1}${colors.reset}`);
+    console.log(`\n${colors.white}${emojis.key} Memproses Token #${tokenIndex + 1}${colors.reset}`);
 
     let proxy = null;
     if (useProxy && proxies.length > 0) {
@@ -243,7 +255,7 @@ async function processTokenTasks(token, tokenIndex, useProxy = true) {
     const axiosInstance = createAxiosInstance(token, proxy);
 
     const tasks = await getTasks(axiosInstance);
-    console.log(`${colors.white}${emojis.info} Found ${colors.yellow}${tasks.length}${colors.white} tasks for token #${tokenIndex + 1}${colors.reset}`);
+    console.log(`${colors.white}${emojis.info} Task ${colors.yellow}${tasks.length}${colors.white} berhasil untuk token #${tokenIndex + 1}${colors.reset}`);
     
     let claimedCount = 0;
     let failedCount = 0;
@@ -260,7 +272,7 @@ async function processTokenTasks(token, tokenIndex, useProxy = true) {
         task.status === 'pending' ? emojis.pending :
         task.status === 'claimed' ? emojis.success : emojis.info;
         
-      console.log(`${colors.white}${emojis.info} Processing: ${colors.bright}${task.name}${colors.reset} ${colors.white}(${statusColor}${task.status} ${statusEmoji}${colors.white}) - ${colors.green}${task.pointAmount} points${colors.reset}`);
+      console.log(`${colors.white}${emojis.info} Memproses: ${colors.bright}${task.name}${colors.reset} ${colors.white}(${statusColor}${task.status} ${statusEmoji}${colors.white}) - ${colors.green}${task.pointAmount} points${colors.reset}`);
 
       const claimResult = await claimTask(axiosInstance, task._id);
       
@@ -275,17 +287,17 @@ async function processTokenTasks(token, tokenIndex, useProxy = true) {
       await new Promise(resolve => setTimeout(resolve, 2000));
     }
     
-    console.log(`\n${colors.white}${emojis.info} Task processing summary for token #${tokenIndex + 1}:${colors.reset}`);
-    console.log(`${colors.green}${emojis.success} Successfully claimed: ${claimedCount}${colors.reset}`);
-    console.log(`${colors.yellow}${emojis.pending} Already claimed: ${alreadyClaimedCount}${colors.reset}`);
-    console.log(`${colors.red}${emojis.error} Failed to claim: ${failedCount}${colors.reset}`);
+    console.log(`\n${colors.white}${emojis.info} Memproses rask summary untuk token #${tokenIndex + 1}:${colors.reset}`);
+    console.log(`${colors.green}${emojis.success} Berhasil diclaim: ${claimedCount}${colors.reset}`);
+    console.log(`${colors.yellow}${emojis.pending} Siap diclaim: ${alreadyClaimedCount}${colors.reset}`);
+    console.log(`${colors.red}${emojis.error} Gagal untuk diclaim: ${failedCount}${colors.reset}`);
 
     const pointStats = await getPointStats(axiosInstance);
     printPointStats(pointStats, tokenIndex);
     
     return { claimedCount, alreadyClaimedCount, failedCount };
   } catch (error) {
-    console.error(`${colors.red}${emojis.error} Error processing token #${tokenIndex + 1}:${colors.reset}`, error.message);
+    console.error(`${colors.red}${emojis.error} Gagal memproses token #${tokenIndex + 1}:${colors.reset}`, error.message);
     return { claimedCount: 0, alreadyClaimedCount: 0, failedCount: 0 };
   }
 }
@@ -298,17 +310,23 @@ function reloadTokensAndProxies() {
     tokens = newTokens;
     proxies = newProxies;
     
-    console.log(`${colors.green}${emojis.change} Tokens and proxies reloaded successfully${colors.reset}`);
+    console.log(`${colors.green}${emojis.change} Token dan proxy berhasil dimuat${colors.reset}`);
     return true;
   } catch (error) {
-    console.error(`${colors.red}${emojis.error} Error reloading tokens and proxies:${colors.reset}`, error.message);
+    console.error(`${colors.red}${emojis.error} Gagal memuat token dan proxy:${colors.reset}`, error.message);
     return false;
   }
 }
 
 async function runBot() {
   printBanner();
-  console.log(`${colors.green}${emojis.rocket} Starting Flow3 Multi-Token Task Bot...${colors.reset}`);
+  console.log(`${colors.white}${emojis.rocket}
+  █▀ █░ █▀█ █░█░█ ▀▀█
+  █▀ █▄ █▄█ ▀▄▀▄▀ ▄██
+  ${colors.reset}`);
+  console.log(`${colors.green}${emojis.rocket}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.reset}`);
+  console.log(`${colors.green}${emojis.rocket} Memulai Flow3 Multi-Token Task...${colors.reset}`);
+
 
   tokens = loadTokens();
   proxies = loadProxies();
@@ -317,7 +335,7 @@ async function runBot() {
   
   while (true) {
     try {
-      console.log(`\n${colors.white}${emojis.time} Starting cycle #${cycleCount}${colors.reset}`);
+      console.log(`\n${colors.white}${emojis.time} Memulai cycle #${cycleCount}${colors.reset}`);
       console.log(`${colors.white}${'-'.repeat(50)}${colors.reset}`);
 
       reloadTokensAndProxies();
@@ -333,23 +351,23 @@ async function runBot() {
         totalFailed += result.failedCount;
 
         if (i < tokens.length - 1) {
-          console.log(`${colors.yellow}${emojis.time} Waiting 5 seconds before processing next token...${colors.reset}`);
+          console.log(`${colors.yellow}${emojis.time} Menungu 5 detik sebelum memproses token selanjutnya...${colors.reset}`);
           await new Promise(resolve => setTimeout(resolve, 5000));
         }
       }
 
       console.log(`\n${colors.white}${emojis.info} CYCLE #${cycleCount} TOTAL SUMMARY:${colors.reset}`);
       console.log(`${colors.white}${'-'.repeat(50)}${colors.reset}`);
-      console.log(`${colors.green}${emojis.success} Total successfully claimed: ${totalClaimed}${colors.reset}`);
-      console.log(`${colors.yellow}${emojis.pending} Total already claimed: ${totalAlreadyClaimed}${colors.reset}`);
-      console.log(`${colors.red}${emojis.error} Total failed to claim: ${totalFailed}${colors.reset}`);
+      console.log(`${colors.green}${emojis.success} Total berhasil diclaim: ${totalClaimed}${colors.reset}`);
+      console.log(`${colors.yellow}${emojis.pending} Total siap diclaim: ${totalAlreadyClaimed}${colors.reset}`);
+      console.log(`${colors.red}${emojis.error} Total gagal diclaim: ${totalFailed}${colors.reset}`);
       console.log(`${colors.white}${'-'.repeat(50)}${colors.reset}`);
 
-      const waitSeconds = 30;
-      console.log(`${colors.yellow}${emojis.time} Waiting ${waitSeconds} seconds before next cycle...${colors.reset}`);
+      const waitSeconds = 572;
+      console.log(`${colors.yellow}${emojis.time} Menunggu ${waitSeconds} detik sebelum cycle selanjutnya...${colors.reset}`);
 
       for (let i = waitSeconds; i > 0; i--) {
-        process.stdout.write(`\r${colors.yellow}${emojis.time} Next cycle in: ${colors.bright}${i}${colors.reset} seconds`);
+        process.stdout.write(`\r${colors.yellow}${emojis.time} Cycle selanjutnya: ${colors.bright}${i}${colors.reset} seconds`);
         await new Promise(resolve => setTimeout(resolve, 1000));
       }
       process.stdout.write('\r' + ' '.repeat(60) + '\r'); 
@@ -357,8 +375,8 @@ async function runBot() {
       cycleCount++;
     } catch (error) {
       console.error(`${colors.red}${emojis.error} Error in main bot loop:${colors.reset}`, error.message);
-      console.log(`${colors.yellow}${emojis.pending} Waiting 30 seconds before retrying...${colors.reset}`);
-      await new Promise(resolve => setTimeout(resolve, 30 * 1000));
+      console.log(`${colors.yellow}${emojis.pending} Menunggu 572 sebelum memulai ulang...${colors.reset}`);
+      await new Promise(resolve => setTimeout(resolve, 572 * 1000));
     }
   }
 }
