@@ -350,15 +350,15 @@ async function runBot() {
 
       for (let i = waitSeconds; i > 0; i--) {
         process.stdout.write(`\r${colors.yellow}${emojis.time} Next cycle in: ${colors.bright}${i}${colors.reset} seconds`);
-        await new Promise(resolve => setTimeout(resolve, 6000));
+        await new Promise(resolve => setTimeout(resolve, 1000));
       }
       process.stdout.write('\r' + ' '.repeat(60) + '\r'); 
       
       cycleCount++;
     } catch (error) {
       console.error(`${colors.red}${emojis.error} Error in main bot loop:${colors.reset}`, error.message);
-      console.log(`${colors.yellow}${emojis.pending} Waiting 30 seconds before retrying...${colors.reset}`);
-      await new Promise(resolve => setTimeout(resolve, 30 * 6000));
+      console.log(`${colors.yellow}${emojis.pending} Menunggu 600 detik untuk point selanjutnya...${colors.reset}`);
+      await new Promise(resolve => setTimeout(resolve, 600 * 1000));
     }
   }
 }
