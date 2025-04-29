@@ -242,9 +242,11 @@ function printPointStats(stats, tokenIndex) {
 async function processTokenTasks(token, tokenIndex, useProxy = true) {
   try {
     console.log(`${colors.white}${emojis.rocket}
-    █▀ █░ █▀█ █░█░█ ▀▀█
-    █▀ █▄ █▄█ ▀▄▀▄▀ ▄██  Auto task dan multi akun
+           █▀ █░ █▀█ █░█░█ ▀▀█
+           █▀ █▄ █▄█ ▀▄▀▄▀ ▄██  Auto task dan multi akun
     ${colors.reset}`); 
+    console.log(`${colors.white}${emojis.rocket}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ${colors.reset}`); 
     console.log(`\n${colors.white}${emojis.key} Memproses Token #${tokenIndex + 1}${colors.reset}`);
 
     let proxy = null;
