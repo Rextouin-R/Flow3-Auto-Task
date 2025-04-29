@@ -167,7 +167,6 @@ function printBanner() {
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     ${colors.reset}`,
     `${colors.cyan}==> 🟦 join channel : https://t.me/UNLXairdop${colors.reset}`
-    `${colors.cyan}==================================≠===============${colors.reset}`
     `${colors.cyan}==> ⬛ github : https://github.com/Rextouin-R/${colors.reset}`
     `${colors.cyan}==================================≠===============${colors.reset}`
     
