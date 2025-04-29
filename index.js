@@ -224,23 +224,27 @@ async function claimTask(axiosInstance, taskId) {
 
 function printPointStats(stats, tokenIndex) {
   if (!stats) {
-    console.log(`${colors.yellow}${emojis.warning} No point stats available for token #${tokenIndex + 1}${colors.reset}`);
+    console.log(`${colors.yellow}${emojis.warning} Tidak ada status point untuk token #${tokenIndex + 1}${colors.reset}`);
     return;
   }
   
   console.log(`\n${colors.cyan}${emojis.money} INFORMASI BALANCE (TOKEN #${tokenIndex + 1}) ${emojis.money}${colors.reset}`);
   console.log(`${colors.cyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.reset}`);
-  console.log(`${colors.white}${emojis.star} Total Point          :${colors.green}${stats.totalPointEarned.toFixed(2)}${colors.reset}`);
-  console.log(`${colors.white}${emojis.check} Task Point          :${colors.green}${stats.totalPointTask.toFixed(2)}${colors.reset}`);
-  console.log(`${colors.white}${emojis.rocket} Internet Point     :${colors.green}${stats.totalPointInternet.toFixed(2)}${colors.reset}`);
-  console.log(`${colors.white}${emojis.info} Referral Point       :${colors.green}${stats.totalPointReferral.toFixed(2)}${colors.reset}`);
-  console.log(`${colors.white}${emojis.time} Earnings Hari Ini    :${colors.green}${stats.todayPointEarned.toFixed(2)}${colors.reset}`);
-  console.log(`${colors.white}${emojis.money} Earning Rate        :${colors.green}${stats.earningRate.toFixed(2)}/day${colors.reset}`);
+  console.log(`${colors.white}${emojis.star} Total Point         :${colors.green}${stats.totalPointEarned.toFixed(2)}${colors.reset}`);
+  console.log(`${colors.white}${emojis.check}  Task Point          :${colors.green}${stats.totalPointTask.toFixed(2)}${colors.reset}`);
+  console.log(`${colors.white}${emojis.rocket} Internet Point      :${colors.green}${stats.totalPointInternet.toFixed(2)}${colors.reset}`);
+  console.log(`${colors.white}${emojis.info}  Referral Point       :${colors.green}${stats.totalPointReferral.toFixed(2)}${colors.reset}`);
+  console.log(`${colors.white}${emojis.time}  Earnings Hari Ini    :${colors.green}${stats.todayPointEarned.toFixed(2)}${colors.reset}`);
+  console.log(`${colors.white}${emojis.money} Earning Rate         :${colors.green}${stats.earningRate.toFixed(2)}/day${colors.reset}`);
   console.log(`${colors.cyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.reset}\n`);
 }
 
 async function processTokenTasks(token, tokenIndex, useProxy = true) {
   try {
+    console.log(`${colors.white}${emojis.rocket}
+    █▀ █░ █▀█ █░█░█ ▀▀█
+    █▀ █▄ █▄█ ▀▄▀▄▀ ▄██  Auto task dan multi akun
+    ${colors.reset}`); 
     console.log(`\n${colors.white}${emojis.key} Memproses Token #${tokenIndex + 1}${colors.reset}`);
 
     let proxy = null;
@@ -316,7 +320,7 @@ function reloadTokensAndProxies() {
 
 async function runBot() {
   printBanner();
-  console.log(`${colors.green}${emojis.rocket}
+  console.log(`${colors.white}${emojis.rocket}
   █▀ █░ █▀█ █░█░█ ▀▀█
   █▀ █▄ █▄█ ▀▄▀▄▀ ▄██  Auto task dan multi akun
   ${colors.reset}`);
@@ -356,11 +360,11 @@ async function runBot() {
       console.log(`${colors.red}${emojis.error} Total gagal diclaim: ${totalFailed}${colors.reset}`);
       console.log(`${colors.white}${'-'.repeat(50)}${colors.reset}`);
 
-      const waitSeconds = 655;
-      console.log(`${colors.yellow}${emojis.time} Menunggu ${waitSeconds} detik sebeblum cycle selanjutnya...${colors.reset}`);
+      const waitSeconds = 1000;
+      console.log(`${colors.white}${emojis.time}  Menunggu ${waitSeconds} detik sebeblum cycle selanjutnya...${colors.reset}`);
 
       for (let i = waitSeconds; i > 0; i--) {
-        process.stdout.write(`\r${colors.yellow}${emojis.time} Cycle selanjutnya: ${colors.bright}${i}${colors.reset} seconds`);
+        process.stdout.write(`\r${colors.white}${emojis.time}  Cycle selanjutnya: ${colors.bright}${i}${colors.reset} seconds`);
         await new Promise(resolve => setTimeout(resolve, 1000));
       }
       process.stdout.write('\r' + ' '.repeat(60) + '\r'); 
@@ -368,8 +372,8 @@ async function runBot() {
       cycleCount++;
     } catch (error) {
       console.error(`${colors.red}${emojis.error} Error in main bot loop:${colors.reset}`, error.message);
-      console.log(`${colors.yellow}${emojis.pending} Menunggu 655 detik sebelum memulai...${colors.reset}`);
-      await new Promise(resolve => setTimeout(resolve, 655 * 1000));
+      console.log(`${colors.yellow}${emojis.pending} Menunggu 1000 detik sebelum memulai...${colors.reset}`);
+      await new Promise(resolve => setTimeout(resolve, 1000 * 1000));
     }
   }
 }
