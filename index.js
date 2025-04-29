@@ -49,12 +49,12 @@ function loadTokens() {
       throw new Error('Token file is empty');
     }
     
-    console.log(`${colors.green}${emojis.key} Loaded ${colors.bright}${tokenList.length}${colors.reset}${colors.green} tokens successfully from token.txt${colors.reset}`);
+    console.log(`${colors.green}${emojis.key} Memuat ${colors.bright}${tokenList.length}${colors.reset}${colors.green} token berhasil dari token.txt${colors.reset}`);
     
     return tokenList;
   } catch (error) {
-    console.error(`${colors.red}${emojis.error} Error reading tokens from file:${colors.reset}`, error.message);
-    console.error(`${colors.yellow}${emojis.warning} Please create a 'token.txt' file with one token per line${colors.reset}`);
+    console.error(`${colors.red}${emojis.error} Gagal memeriksa token dari file:${colors.reset}`, error.message);
+    console.error(`${colors.yellow}${emojis.warning} Silahkan buat 'token.txt' untuk menjalankan token perbaris${colors.reset}`);
     process.exit(1);
   }
 }
@@ -64,7 +64,7 @@ function loadProxies() {
     const proxyPath = path.join(__dirname, 'proxies.txt');
 
     if (!fs.existsSync(proxyPath)) {
-      console.log(`${colors.yellow}${emojis.warning} proxies.txt not found. Running without proxies.${colors.reset}`);
+      console.log(`${colors.yellow}${emojis.warning} proxies.txt Tidak falid. Untuk menjalankan proxies.${colors.reset}`);
       return [];
     }
     
@@ -75,15 +75,15 @@ function loadProxies() {
       .filter(proxy => proxy.length > 0);
     
     if (proxyList.length > 0) {
-      console.log(`${colors.green}${emojis.network} Loaded ${colors.bright}${proxyList.length}${colors.reset}${colors.green} proxies from proxies.txt${colors.reset}`);
+      console.log(`${colors.green}${emojis.network} Memuat ${colors.bright}${proxyList.length}${colors.reset}${colors.green} proxy dari proxies.txt${colors.reset}`);
     } else {
-      console.log(`${colors.yellow}${emojis.warning} No proxies found in proxies.txt. Running without proxies.${colors.reset}`);
+      console.log(`${colors.yellow}${emojis.warning} Proxy tidak falid di proxies.txt. Untuk menjalankan proxies.${colors.reset}`);
     }
     
     return proxyList;
   } catch (error) {
-    console.error(`${colors.yellow}${emojis.warning} Error reading proxies:${colors.reset}`, error.message);
-    console.log(`${colors.yellow}${emojis.warning} Running without proxies.${colors.reset}`);
+    console.error(`${colors.yellow}${emojis.warning} Gagal memuat proxies:${colors.reset}`, error.message);
+    console.log(`${colors.yellow}${emojis.warning} Menjalankan dengan proxies.${colors.reset}`);
     return [];
   }
 }
@@ -117,7 +117,7 @@ function createProxyAgent(proxyString) {
   try {
     return new HttpsProxyAgent(formattedProxy);
   } catch (error) {
-    console.error(`${colors.red}${emojis.error} Error creating proxy agent for ${proxyString}:${colors.reset}`, error.message);
+    console.error(`${colors.red}${emojis.error} Gagal membuat proxy dari ${proxyString}:${colors.reset}`, error.message);
     return null;
   }
 }
@@ -148,7 +148,7 @@ function createAxiosInstance(token, proxyString = null) {
     const proxyAgent = createProxyAgent(proxyString);
     if (proxyAgent) {
       axiosConfig.httpsAgent = proxyAgent;
-      console.log(`${colors.cyan}${emojis.network} Using proxy: ${colors.bright}${proxyString}${colors.reset}`);
+      console.log(`${colors.cyan}${emojis.network} Menggunakan proxy: ${colors.bright}${proxyString}${colors.reset}`);
     }
   }
   
@@ -157,9 +157,18 @@ function createAxiosInstance(token, proxyString = null) {
 
 function printBanner() {
   const bannerLines = [
-    `${colors.cyan}----------------------------------------${colors.reset}`,
-    `${colors.cyan}${colors.reset}  ${colors.bright}${colors.white}FLOW3 AUTO TASK - AIRDROP INSIDERS${colors.reset}  ${colors.cyan}${colors.reset}`,
-    `${colors.cyan}----------------------------------------${colors.reset}`
+    `${colors.white}
+    ▄▀█ █ █▀█ █▀▄ █▀█ █▀█ █▀█ ∞
+    █▀█ █ █▀▄ █▄▀ █▀▄ █▄█ █▀▀   
+    ${colors.reset}`,
+    `${colors.white}
+    ┏━┓ ┏━┓         ┏━┓ ╔═╗             ╔═╗ ┏━┓__            ┏━┓
+    ┃ ┃ ┃ ┃ ┏━╻━━━┓ ┃ ┃ ┏━┓ ┏━╻━━╻━━━━┓ ┏━┓ ┃ ┏━┛  ┏━━━━╮ ╭━━╹ ┃
+    ┃ ┗━┛ ┃ ┃ ┏━┓ ┃ ┃ ┃ ┃ ┃ ┃ ┏━┓ ┏━┓ ┃ ┃ ┃ ┃ ┗━━┓ ┃ ┏━━┛ ┃ ━━ ┃
+    ┗━━━ ━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━━━━┛ ┗━━━━┛ ╰━━━━┛
+    ${colors.reset}`,
+    `${colors.cyan}${colors.reset}  ${colors.bright}${colors.white}FLOW3 AUTO TASK${colors.reset}  ${colors.cyan}${colors.reset}`,
+    `${colors.cyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.reset}`
   ];
   
   console.log('\n' + bannerLines.join('\n') + '\n');
