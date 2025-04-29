@@ -245,6 +245,7 @@ async function processTokenTasks(token, tokenIndex, useProxy = true) {
     console.log(`\n${colors.white}
     █▀ █░ █▀█ █░█░█   ▀▀█
     █▀ █▄ █▄█ ▀▄▀▄▀   ▄██  FLOW3 AUTO TASK
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     ==> 🟦 join channel : https://t.me/UNLXairdop
     ==> ⬛ github : https://github.com/Rextouin-R/
     ${colors.reset}`);
