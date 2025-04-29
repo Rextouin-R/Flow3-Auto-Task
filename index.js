@@ -245,8 +245,8 @@ async function processTokenTasks(token, tokenIndex, useProxy = true) {
            █▀ █░ █▀█ █░█░█ ▀▀█
            █▀ █▄ █▄█ ▀▄▀▄▀ ▄██  Auto task dan multi akun
     ${colors.reset}`); 
-    console.log(`${colors.white}${emojis.rocket}
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ${colors.reset}`); 
+    console.log(`${colors.white}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ${colors.reset}`); 
     console.log(`\n${colors.white}${emojis.key} Memproses Token #${tokenIndex + 1}${colors.reset}`);
 
     let proxy = null;
