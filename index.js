@@ -168,10 +168,6 @@ function printBanner() {
     ┗━━━ ━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━━━━┛ ┗━━━━┛ ╰━━━━┛
     ${colors.reset}  ${colors.cyan}${colors.reset}`,
     `${colors.cyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.reset}`
-    `${colors.cyan}${colors.reset}  ${colors.bright}${colors.white}==> 🟦 join channel : https://t.me/UNLXairdop${colors.reset}  ${colors.cyan}${colors.reset}`,
-    `${colors.cyan}${colors.reset}  ${colors.bright}${colors.white}==================================≠===============${colors.reset}  ${colors.cyan}${colors.reset}`,
-    `${colors.cyan}${colors.reset}  ${colors.bright}${colors.white}==> ⬛ github : https://github.com/Rextouin-R/${colors.reset}  ${colors.cyan}${colors.reset}`,
-    `${colors.cyan}${colors.reset}  ${colors.bright}${colors.white}==================================≠===============${colors.reset}  ${colors.cyan}${colors.reset}`,
   ];
   
   console.log('\n' + bannerLines.join('\n') + '\n');
