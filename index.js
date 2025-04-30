@@ -361,7 +361,7 @@ async function runBot() {
       console.log(`${colors.red}${emojis.error} Total gagal di claim: ${totalFailed}${colors.reset}`);
       console.log(`${colors.white}${'-'.repeat(50)}${colors.reset}`);
 
-      const waitSeconds = 955;
+      const waitSeconds = 500;
       console.log(`${colors.yellow}${emojis.time}  Menunggu ${waitSeconds} detik untuk memulai cycle selanjutnya...${colors.reset}`);
 
       for (let i = waitSeconds; i > 0; i--) {
@@ -373,8 +373,8 @@ async function runBot() {
       cycleCount++;
     } catch (error) {
       console.error(`${colors.red}${emojis.error} Error in main bot loop:${colors.reset}`, error.message);
-      console.log(`${colors.yellow}${emojis.pending}  Menunggu 955 detik untuk mendapatkan 15000 point selanjutnya...${colors.reset}`);
-      await new Promise(resolve => setTimeout(resolve, 955 * 1000));
+      console.log(`${colors.yellow}${emojis.pending}  Menunggu 500 detik untuk mendapatkan 15000 point selanjutnya...${colors.reset}`);
+      await new Promise(resolve => setTimeout(resolve, 500 * 1000));
     }
   }
 }
