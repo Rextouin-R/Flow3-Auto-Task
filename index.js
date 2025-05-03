@@ -183,7 +183,7 @@ function printBanner() {
 \n${colors.Gold}[+]${colors.reset} JOIN : ${colors.Teal}==> 🟦 join channel : https://t.me/UNLXairdop
 \n${colors.Gold}[+]${colors.reset} FOLLOW : ${colors.Teal}==> ⬛ github : https://github.com/Rextouin-R/
 \n${colors.Green}${'―'.repeat(60)}
-\n${colors.Gold}]-> ${colors.Blue}{ ${colors.reset}FLOW3gi Extension${colors.Neon} v1.1.4${colors.Blue} } ${colors.reset}
+\n${colors.Gold}]-> ${colors.Blue}{ ${colors.reset}FLOW3 Extension${colors.Neon} v1.1.4${colors.Blue} } ${colors.reset}
 \n${colors.Gold}]-> ${colors.Blue}{ ${colors.reset}BOT${colors.Neon} v1.0.0${colors.Blue} } ${colors.reset}
 \n${colors.Green}${'―'.repeat(60)}
 
