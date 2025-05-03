@@ -171,15 +171,15 @@ function printBanner() {
    ┃ ┃ ┃ ┃ ┏━╻━━━┓ ┃ ┃ ┏━┓ ┏━╻━━╻━━━━┓ ┏━┓ ┃ ┏━┛  ┏━━━━╮ ╭━━╹ ┃${colors.blue}
    ┃ ┗━┛ ┃ ┃ ┏━┓ ┃ ┃ ┃ ┃ ┃ ┃ ┏━┓ ┏━┓ ┃ ┃ ┃ ┃ ┗━━┓ ┃ ┏━━┛ ┃ ━━ ┃${colors.Teal}
    ┗━━━ ━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━━━━┛ ┗━━━━┛ ╰━━━━┛
-    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.Teal}{${colors.Neon}Rextouin${colors.Teal}}${colors.RESET}
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.Teal} ${colors.Neon}Rextouin${colors.Teal} ${colors.RESET}
 
    \n${colors.RESET}DEPINED Bot ${colors.blue}{ ${colors.Neon}JS${colors.blue} }${colors.RESET}
     \n${colors.Green}${'―'.repeat(50)}
     \n${colors.Gold}[+]${colors.RESET} JOIN : ${colors.Teal}==> 🟦 join channel : https://t.me/UNLXairdop
     \n${colors.Gold}[+]${colors.RESET} FOLLOW : ${colors.Teal}==> ⬛ github : https://github.com/Rextouin-R/
     \n${colors.Green}${'―'.repeat(50)}
-    \n${colors.Gold}]-> ${colors.blue}{ ${colors.RESET}DEPINED Extension${colors.Neon} v1.1.4${colors.blue} } ${colors.RESET}
-    \n${colors.Gold}]-> ${colors.blue}{ ${colors.RESET}BOT${colors.Neon} v1.0.0${colors.blue} } ${colors.RESET}
+    \n${colors.Gold}]-> ${colors.blue} ${colors.RESET}DEPINED Extension${colors.Neon} v1.1.4${colors.blue} ${colors.RESET}
+    \n${colors.Gold}]-> ${colors.blue} ${colors.RESET}BOT${colors.Neon} v1.0.0${colors.blue} ${colors.RESET}
     \n${colors.Green}${'―'.repeat(50)}
   
 
