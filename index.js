@@ -185,7 +185,7 @@ function printBanner() {
   
 
   `);
-  console.log('\n' + bannerLines.join('\n') + '\n');
+  
 }
 
 async function getPointStats(axiosInstance) {
