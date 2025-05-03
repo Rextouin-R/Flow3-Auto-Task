@@ -177,10 +177,10 @@ function printBanner() {
    \n${colors.RESET}DEPINED Bot ${colors.Blue}{ ${colors.Neon}JS${colors.Blue} }${colors.RESET}
     \n${colors.Green}${'―'.repeat(50)}
     \n${colors.Gold}[+]${colors.RESET} JOIN : ${colors.Teal}==> 🟦 join channel : https://t.me/UNLXairdop
-    \n${colors.Gold}[+]${colors.RESET} FOLLOW : ${Colors.Teal}==> ⬛ github : https://github.com/Rextouin-R/
+    \n${colors.Gold}[+]${colors.RESET} FOLLOW : ${colors.Teal}==> ⬛ github : https://github.com/Rextouin-R/
     \n${colors.Green}${'―'.repeat(50)}
     \n${colors.Gold}]-> ${colors.Blue}{ ${colors.RESET}DEPINED Extension${colors.Neon} v1.1.4${colors.Blue} } ${colors.RESET}
-    \n${colors.Gold}]-> ${colors.Blue}{ ${Colors.RESET}BOT${colors.Neon} v1.0.0${colors.Blue} } ${colors.RESET}
+    \n${colors.Gold}]-> ${colors.Blue}{ ${colors.RESET}BOT${colors.Neon} v1.0.0${colors.Blue} } ${colors.RESET}
     \n${colors.Green}${'―'.repeat(50)}
   
 
