@@ -4,6 +4,14 @@ const path = require('path');
 const { HttpsProxyAgent } = require('https-proxy-agent');
 
 const colors = {
+  Gold: "\x1b[38;5;220m",
+  Red: "\x1b[31m",
+  Teal: "\x1b[38;5;51m",
+  Green: "\x1b[32m",
+  Neon: "\x1b[38;5;198m",
+  Blue: "\x1b[34m",
+  Magenta: "\x1b[95m",
+  Dim: "\x1b[2m",
   reset: '\x1b[0m',
   bright: '\x1b[1m',
   green: '\x1b[32m',
@@ -157,18 +165,24 @@ function createAxiosInstance(token, proxyString = null) {
 
 function printBanner() {
   const bannerLines = [
-    `${colors.white}
-    ▄▀█ █ █▀█ █▀▄ █▀█ █▀█ █▀█ ∞
-    █▀█ █ █▀▄ █▄▀ █▀▄ █▄█ █▀▀   
-    ${colors.reset}`,
-    `${colors.white}
-    ┏━┓ ┏━┓         ┏━┓ ╔═╗             ╔═╗ ┏━┓__            ┏━┓
-    ┃ ┃ ┃ ┃ ┏━╻━━━┓ ┃ ┃ ┏━┓ ┏━╻━━╻━━━━┓ ┏━┓ ┃ ┏━┛  ┏━━━━╮ ╭━━╹ ┃
-    ┃ ┗━┛ ┃ ┃ ┏━┓ ┃ ┃ ┃ ┃ ┃ ┃ ┏━┓ ┏━┓ ┃ ┃ ┃ ┃ ┗━━┓ ┃ ┏━━┛ ┃ ━━ ┃
-    ┗━━━ ━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━━━━┛ ┗━━━━┛ ╰━━━━┛
-    ${colors.reset}`,
-    `${colors.cyan}${colors.reset}  ${colors.bright}${colors.white}FLOW3 AUTO TASK${colors.reset}  ${colors.cyan}${colors.reset}`,
-    `${colors.cyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.reset}`
+    console.log(`
+   ▄▀█ █ █▀█ █▀▄ █▀█ █▀█ █▀█ ∞ ${colors.Gold}
+   █▀█ █ █▀▄ █▄▀ █▀▄ █▄█ █▀▀ ${colors.Gold}
+   ┏━┓ ┏━┓         ┏━┓ ╔═╗             ╔═╗ ┏━┓__            ┏━┓${colors.Green}
+   ┃ ┃ ┃ ┃ ┏━╻━━━┓ ┃ ┃ ┏━┓ ┏━╻━━╻━━━━┓ ┏━┓ ┃ ┏━┛  ┏━━━━╮ ╭━━╹ ┃${colors.Blue}
+   ┃ ┗━┛ ┃ ┃ ┏━┓ ┃ ┃ ┃ ┃ ┃ ┃ ┏━┓ ┏━┓ ┃ ┃ ┃ ┃ ┗━━┓ ┃ ┏━━┛ ┃ ━━ ┃${colors.Teal}
+   ┗━━━ ━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━━━━┛ ┗━━━━┛ ╰━━━━┛
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.Teal}{${colors.Neon}Rextouin${colors.Teal}}${colors.RESET}
+
+   \n${colors.RESET}DEPINED Bot ${colors.Blue}{ ${colors.Neon}JS${colors.Blue} }${colors.RESET}
+    \n${colors.Green}${'―'.repeat(50)}
+    \n${colors.Gold}[+]${colors.RESET} JOIN : ${colors.Teal}==> 🟦 join channel : https://t.me/UNLXairdop
+    \n${colors.Gold}[+]${colors.RESET} FOLLOW : ${Colors.Teal}==> ⬛ github : https://github.com/Rextouin-R/
+    \n${colors.Green}${'―'.repeat(50)}
+    \n${colors.Gold}]-> ${colors.Blue}{ ${colors.RESET}DEPINED Extension${colors.Neon} v1.1.4${colors.Blue} } ${colors.RESET}
+    \n${colors.Gold}]-> ${colors.Blue}{ ${Colors.RESET}BOT${colors.Neon} v1.0.0${Colors.Blue} } ${colors.RESET}
+    \n${colors.Green}${'―'.repeat(50)}
+  `);
   ];
   
   console.log('\n' + bannerLines.join('\n') + '\n');
