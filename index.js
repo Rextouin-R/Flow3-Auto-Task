@@ -166,7 +166,7 @@ function createAxiosInstance(token, proxyString = null) {
 function printBanner() {
   
     console.log(`
-   ▄▀█ █ █▀█ █▀▄ █▀█ █▀█ █▀█ ∞
+   ▄▀█ █ █▀█ █▀▄ █▀█ █▀█ █▀█ ∞ ${colors.Gold}
    █▀█ █ █▀▄ █▄▀ █▀▄ █▄█ █▀▀ ${colors.Gold}
    ┏━┓ ┏━┓         ┏━┓ ╔═╗             ╔═╗ ┏━┓__            ┏━┓${colors.Green}
    ┃ ┃ ┃ ┃ ┏━╻━━━┓ ┃ ┃ ┏━┓ ┏━╻━━╻━━━━┓ ┏━┓ ┃ ┏━┛  ┏━━━━╮ ╭━━╹ ┃${colors.Blue}
