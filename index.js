@@ -164,7 +164,7 @@ function createAxiosInstance(token, proxyString = null) {
 }
 
 function printBanner() {
-  const bannerLines = [
+  
     console.log(`
    ▄▀█ █ █▀█ █▀▄ █▀█ █▀█ █▀█ ∞ ${colors.Gold}
    █▀█ █ █▀▄ █▄▀ █▀▄ █▄█ █▀▀ ${colors.Gold}
@@ -182,9 +182,9 @@ function printBanner() {
     \n${colors.Gold}]-> ${colors.Blue}{ ${colors.RESET}DEPINED Extension${colors.Neon} v1.1.4${colors.Blue} } ${colors.RESET}
     \n${colors.Gold}]-> ${colors.Blue}{ ${Colors.RESET}BOT${colors.Neon} v1.0.0${Colors.Blue} } ${colors.RESET}
     \n${colors.Green}${'―'.repeat(50)}
-  `);
-  ];
   
+
+  `);
   console.log('\n' + bannerLines.join('\n') + '\n');
 }
 
