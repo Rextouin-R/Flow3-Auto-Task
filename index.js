@@ -178,12 +178,12 @@ function printBanner() {
    .l0WMMMMMMWMMMNOl.    .cO┃ ┗━┛ ┃ ┃ ┏━┓ ┃ ┃ ┃ ┃ ┃ ┃ ┏━┓ ┏━┓ ┃ ┃ ┃ ┃ ┗━━┓ ┃ ┏━━┛ ┃ ━━ ┃${colors.Teal}
      .;ok0KXK0Odl,.        l┗━━━ ━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━━━━┛ ┗━━━━┛ ╰━━━━┛
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.Teal}{${colors.Neon}Rextouin${colors.Teal}}${colors.reset}
-\n${colors.reset}DAWN Validator ${colors.Blue}{ ${colors.Neon}JS${colors.Blue} }${colors.reset}
+\n${colors.reset}FLOW3 Bot ${colors.Blue}{ ${colors.Neon}JS${colors.Blue} }${colors.reset}
 \n${colors.Green}${'―'.repeat(60)}
 \n${colors.Gold}[+]${colors.reset} JOIN : ${colors.Teal}==> 🟦 join channel : https://t.me/UNLXairdop
 \n${colors.Gold}[+]${colors.reset} FOLLOW : ${colors.Teal}==> ⬛ github : https://github.com/Rextouin-R/
 \n${colors.Green}${'―'.repeat(60)}
-\n${colors.Gold}]-> ${colors.Blue}{ ${colors.reset}Dawn Extension${colors.Neon} v1.1.4${colors.Blue} } ${colors.reset}
+\n${colors.Gold}]-> ${colors.Blue}{ ${colors.reset}FLOW3gi Extension${colors.Neon} v1.1.4${colors.Blue} } ${colors.reset}
 \n${colors.Gold}]-> ${colors.Blue}{ ${colors.reset}BOT${colors.Neon} v1.0.0${colors.Blue} } ${colors.reset}
 \n${colors.Green}${'―'.repeat(60)}
 
