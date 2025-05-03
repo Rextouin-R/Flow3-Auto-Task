@@ -9,7 +9,6 @@ const colors = {
   Teal: "\x1b[38;5;51m",
   Green: "\x1b[32m",
   Neon: "\x1b[38;5;198m",
-  Blue: "\x1b[34m",
   Magenta: "\x1b[95m",
   Dim: "\x1b[2m",
   reset: '\x1b[0m',
@@ -169,18 +168,18 @@ function printBanner() {
    ▄▀█ █ █▀█ █▀▄ █▀█ █▀█ █▀█ ∞ ${colors.Gold}
    █▀█ █ █▀▄ █▄▀ █▀▄ █▄█ █▀▀ ${colors.Gold}
    ┏━┓ ┏━┓         ┏━┓ ╔═╗             ╔═╗ ┏━┓__            ┏━┓${colors.Green}
-   ┃ ┃ ┃ ┃ ┏━╻━━━┓ ┃ ┃ ┏━┓ ┏━╻━━╻━━━━┓ ┏━┓ ┃ ┏━┛  ┏━━━━╮ ╭━━╹ ┃${colors.Blue}
+   ┃ ┃ ┃ ┃ ┏━╻━━━┓ ┃ ┃ ┏━┓ ┏━╻━━╻━━━━┓ ┏━┓ ┃ ┏━┛  ┏━━━━╮ ╭━━╹ ┃${colors.blue}
    ┃ ┗━┛ ┃ ┃ ┏━┓ ┃ ┃ ┃ ┃ ┃ ┃ ┏━┓ ┏━┓ ┃ ┃ ┃ ┃ ┗━━┓ ┃ ┏━━┛ ┃ ━━ ┃${colors.Teal}
    ┗━━━ ━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━━━━┛ ┗━━━━┛ ╰━━━━┛
     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.Teal}{${colors.Neon}Rextouin${colors.Teal}}${colors.RESET}
 
-   \n${colors.RESET}DEPINED Bot ${colors.Blue}{ ${colors.Neon}JS${colors.Blue} }${colors.RESET}
+   \n${colors.RESET}DEPINED Bot ${colors.blue}{ ${colors.Neon}JS${colors.blue} }${colors.RESET}
     \n${colors.Green}${'―'.repeat(50)}
     \n${colors.Gold}[+]${colors.RESET} JOIN : ${colors.Teal}==> 🟦 join channel : https://t.me/UNLXairdop
     \n${colors.Gold}[+]${colors.RESET} FOLLOW : ${colors.Teal}==> ⬛ github : https://github.com/Rextouin-R/
     \n${colors.Green}${'―'.repeat(50)}
-    \n${colors.Gold}]-> ${colors.Blue}{ ${colors.RESET}DEPINED Extension${colors.Neon} v1.1.4${colors.Blue} } ${colors.RESET}
-    \n${colors.Gold}]-> ${colors.Blue}{ ${colors.RESET}BOT${colors.Neon} v1.0.0${colors.Blue} } ${colors.RESET}
+    \n${colors.Gold}]-> ${colors.blue}{ ${colors.RESET}DEPINED Extension${colors.Neon} v1.1.4${colors.blue} } ${colors.RESET}
+    \n${colors.Gold}]-> ${colors.blue}{ ${colors.RESET}BOT${colors.Neon} v1.0.0${colors.blue} } ${colors.RESET}
     \n${colors.Green}${'―'.repeat(50)}
   
 
