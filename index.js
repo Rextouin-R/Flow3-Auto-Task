@@ -18,6 +18,7 @@ const colors = {
   red: '\x1b[31m',
   cyan: '\x1b[36m',
   white: '\x1b[37m',
+  Blue: "\x1b[34m",
   blue: '\x1b[34m',
   magenta: '\x1b[35m'
 };
