@@ -171,21 +171,21 @@ function printBanner() {
    .lKWWMMMMMMMMMNO:     'o0NMMMMMMMMMWW0l.  
   ,OWMMMXkdlox0NMMWk. ':dXWMMMNOdoodONWWMWO' 
  .OMMMWx,     .,loc..lKWWMMWKo,.     ,kWMMWk.
- :NMMMO.          .;OWWWWMXd'▄▀█ █ █▀█ █▀▄ █▀█ █▀█ █▀█ ∞${Colors.Gold}
- :NMMMO'        .,xXMMMMNO:. █▀█ █ █▀▄ █▄▀ █▀▄ █▄█ █▀▀ ${Colors.Gold}
- .OWMMWk,..   .;xXWMWWKkl.,l┏━┓ ┏━┓   ,kWMMW┏━┓ ╔═╗             ╔═╗ ┏━┓__            ┏━┓${Colors.Green}
-  ,OWWWMNOxoox0NMWWWKo'..'OW┃ ┃ ┃ ┃ ┏━╻━━━┓ ┃ ┃ ┏━┓ ┏━╻━━╻━━━━┓ ┏━┓ ┃ ┏━┛  ┏━━━━╮ ╭━━╹ ┃${Colors.Blue}
-   .l0WMMMMMMWMMMNOl.    .cO┃ ┗━┛ ┃ ┃ ┏━┓ ┃ ┃ ┃ ┃ ┃ ┃ ┏━┓ ┏━┓ ┃ ┃ ┃ ┃ ┗━━┓ ┃ ┏━━┛ ┃ ━━ ┃${Colors.Teal}
+ :NMMMO.          .;OWWWWMXd'▄▀█ █ █▀█ █▀▄ █▀█ █▀█ █▀█ ∞${colors.Gold}
+ :NMMMO'        .,xXMMMMNO:. █▀█ █ █▀▄ █▄▀ █▀▄ █▄█ █▀▀ ${colors.Gold}
+ .OWMMWk,..   .;xXWMWWKkl.,l┏━┓ ┏━┓   ,kWMMW┏━┓ ╔═╗             ╔═╗ ┏━┓__            ┏━┓${colors.Green}
+  ,OWWWMNOxoox0NMWWWKo'..'OW┃ ┃ ┃ ┃ ┏━╻━━━┓ ┃ ┃ ┏━┓ ┏━╻━━╻━━━━┓ ┏━┓ ┃ ┏━┛  ┏━━━━╮ ╭━━╹ ┃${colors.Blue}
+   .l0WMMMMMMWMMMNOl.    .cO┃ ┗━┛ ┃ ┃ ┏━┓ ┃ ┃ ┃ ┃ ┃ ┃ ┏━┓ ┏━┓ ┃ ┃ ┃ ┃ ┗━━┓ ┃ ┏━━┛ ┃ ━━ ┃${colors.Teal}
      .;ok0KXK0Odl,.        l┗━━━ ━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━┛ ┗━━━━┛ ┗━━━━┛ ╰━━━━┛
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${Colors.Teal}{${Colors.Neon}Rextouin${Colors.Teal}}${Colors.RESET}
-\n${Colors.RESET}DEPINED Bot ${Colors.Blue}{ ${Colors.Neon}JS${Colors.Blue} }${Colors.RESET}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.Teal}{${colors.Neon}Rextouin${colors.Teal}}${Colors.reset}
+\n${colors.reset}DEPINED Bot ${colors.Blue}{ ${colors.Neon}JS${colors.Blue} }${colors.reset}
+\n${colors.Green}${'―'.repeat(60)}
+\n${colors.Gold}[+]${colors.reset} JOIN : ${colors.Teal}==> 🟦 join channel : https://t.me/UNLXairdop
+\n${colors.Gold}[+]${colors.reset} FOLLOW : ${colors.Teal}==> ⬛ github : https://github.com/Rextouin-R/
 \n${Colors.Green}${'―'.repeat(60)}
-\n${Colors.Gold}[+]${Colors.RESET} JOIN : ${Colors.Teal}==> 🟦 join channel : https://t.me/UNLXairdop
-\n${Colors.Gold}[+]${Colors.RESET} FOLLOW : ${Colors.Teal}==> ⬛ github : https://github.com/Rextouin-R/
-\n${Colors.Green}${'―'.repeat(60)}
-\n${Colors.Gold}]-> ${Colors.Blue}{ ${Colors.RESET}DEPINED Extension${Colors.Neon} v1.1.4${Colors.Blue} } ${Colors.RESET}
-\n${Colors.Gold}]-> ${Colors.Blue}{ ${Colors.RESET}BOT${Colors.Neon} v1.0.0${Colors.Blue} } ${Colors.RESET}
-\n${Colors.Green}${'―'.repeat(60)}
+\n${colors.Gold}]-> ${colors.Blue}{ ${colors.reset}DEPINED Extension${colors.Neon} v1.1.4${colors.Blue} } ${colors.reset}
+\n${colors.Gold}]-> ${colors.Blue}{ ${colors.reset}BOT${colors.Neon} v1.0.0${colors.Blue} } ${colors.reset}
+\n${colors.Green}${'―'.repeat(60)}
 
   `);
   
